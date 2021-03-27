@@ -58,6 +58,7 @@ public class ModelSaveRestResource implements ModelDataJsonConstants {
             this.repositoryService.addModelEditorSourceExtra(model.getId(), result);
             outStream.close();
         } catch (Exception e) {
+            e.printStackTrace();
             LOGGER.error("Error saving model", e);
             throw new ActivitiException("Error saving model", e);
         }
